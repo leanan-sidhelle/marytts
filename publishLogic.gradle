@@ -144,10 +144,11 @@ publishing {
         }
     }
     repositories {
+        mavenLocal()
         maven {
             name 'Project'
             url "$rootProject.buildDir/repo"
-        }
+        }/*
         maven {
             if (version.endsWith('-SNAPSHOT')) {
                 name 'OJO'
@@ -160,6 +161,6 @@ publishing {
                 username = findProperty('bintrayUser')
                 password = findProperty('bintrayApiKey')
             }
-        }
+        }*/
     }
 }
